@@ -1,0 +1,339 @@
+﻿
+> skillswap-modern@0.1.0 build
+> next build
+
+  Γû▓ Next.js 14.2.35
+  - Environments: .env
+
+   Creating an optimized production build ...
+node.exe :  ΓÜá 
+Found lockfile 
+missing swc 
+dependencies, 
+patching...
+At D:\sambhav\htmal 
+and css\New 
+folder\npm.ps1:29 
+char:3
++   & $NODE_EXE 
+$NPM_CLI_JS $args
++   ~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~
+    + CategoryInfo  
+            : NotS  
+  pecified: ( ΓÜá   
+  Found lock...e    
+s, patching...:    
+String) [], Rem    
+oteException
+    + FullyQualifie 
+   dErrorId : Nati  
+  veCommandError
+ 
+ Γ¿» Failed to 
+patch lockfile, 
+please try 
+uninstalling and 
+reinstalling next 
+in this workspace
+TypeError: Cannot 
+read properties of 
+undefined (reading 
+'os')
+    at fetchPkgInfo 
+(D:\Riot Games\skill
+swap-modern\node_mod
+ules\next\dist\lib\p
+atch-incorrect-lockf
+ile.js:73:25)
+    at process.proce
+ssTicksAndRejections
+ (node:internal/proc
+ess/task_queues:105:
+5)
+    at async 
+Promise.all (index 
+7)
+    at async patchIn
+correctLockfile 
+(D:\Riot Games\skill
+swap-modern\node_mod
+ules\next\dist\lib\p
+atch-incorrect-lockf
+ile.js:162:26)
+Failed to compile.
+
+./src/app/login/page
+.tsx
+Error: 
+  [31mx[0m You're 
+importing a 
+component that 
+needs useState. It 
+only works in a 
+Client Component 
+but none of its 
+parents are marked 
+with "use client", 
+so they're Server 
+Components by 
+default.
+  [31m|[0m Learn 
+more: https://nextjs
+.org/docs/getting-st
+arted/react-essentia
+ls
+  [31m|[0m 
+  [31m|[0m 
+   
+,-[[36;1;4mD:\Riot 
+Games\skillswap-mode
+rn\src\app\login\pag
+e.tsx[0m:1:1]
+ [2m1[0m | import 
+{ useState } from 
+"react";
+   : [31;1m        
+ ^^^^^^^^[0m
+ [2m2[0m | import 
+{ signIn } from 
+"next-auth/react";
+ [2m3[0m | import 
+{ useRouter } from 
+"next/navigation";
+ [2m3[0m | import 
+Link from 
+"next/link";
+   `----
+
+  [31mx[0m You're 
+importing a 
+component that 
+needs useRouter. It 
+only works in a 
+Client Component 
+but none of its 
+parents are marked 
+with "use client", 
+so they're Server 
+Components by 
+default.
+  [31m|[0m Learn 
+more: https://nextjs
+.org/docs/getting-st
+arted/react-essentia
+ls
+  [31m|[0m 
+  [31m|[0m 
+   
+,-[[36;1;4mD:\Riot 
+Games\skillswap-mode
+rn\src\app\login\pag
+e.tsx[0m:1:1]
+ [2m1[0m | import 
+{ useState } from 
+"react";
+ [2m2[0m | import 
+{ signIn } from 
+"next-auth/react";
+ [2m3[0m | import 
+{ useRouter } from 
+"next/navigation";
+   : [31;1m        
+ ^^^^^^^^^[0m
+ [2m4[0m | import 
+Link from 
+"next/link";
+ [2m5[0m | import 
+{ toast } from 
+"sonner";
+ [2m5[0m | 
+   `----
+
+Import trace for 
+requested module:
+./src/app/login/page
+.tsx
+
+./src/app/post-skill
+/page.tsx
+Error: 
+  [31mx[0m You're 
+importing a 
+component that 
+needs useState. It 
+only works in a 
+Client Component 
+but none of its 
+parents are marked 
+with "use client", 
+so they're Server 
+Components by 
+default.
+  [31m|[0m Learn 
+more: https://nextjs
+.org/docs/getting-st
+arted/react-essentia
+ls
+  [31m|[0m 
+  [31m|[0m 
+   
+,-[[36;1;4mD:\Riot 
+Games\skillswap-mode
+rn\src\app\post-skil
+l\page.tsx[0m:1:1]
+ [2m1[0m | import 
+{ useState } from 
+"react";
+   : [31;1m        
+ ^^^^^^^^[0m
+ [2m2[0m | import 
+{ useRouter } from 
+"next/navigation";
+ [2m3[0m | import 
+{ PlusCircle } from 
+"lucide-react";
+ [2m3[0m | import 
+{ toast } from 
+"sonner";
+   `----
+
+  [31mx[0m You're 
+importing a 
+component that 
+needs useRouter. It 
+only works in a 
+Client Component 
+but none of its 
+parents are marked 
+with "use client", 
+so they're Server 
+Components by 
+default.
+  [31m|[0m Learn 
+more: https://nextjs
+.org/docs/getting-st
+arted/react-essentia
+ls
+  [31m|[0m 
+  [31m|[0m 
+   
+,-[[36;1;4mD:\Riot 
+Games\skillswap-mode
+rn\src\app\post-skil
+l\page.tsx[0m:1:1]
+ [2m1[0m | import 
+{ useState } from 
+"react";
+ [2m2[0m | import 
+{ useRouter } from 
+"next/navigation";
+   : [31;1m        
+ ^^^^^^^^^[0m
+ [2m3[0m | import 
+{ PlusCircle } from 
+"lucide-react";
+ [2m4[0m | import 
+{ toast } from 
+"sonner";
+ [2m4[0m | 
+   `----
+
+Import trace for 
+requested module:
+./src/app/post-skill
+/page.tsx
+
+./src/app/register/p
+age.tsx
+Error: 
+  [31mx[0m You're 
+importing a 
+component that 
+needs useState. It 
+only works in a 
+Client Component 
+but none of its 
+parents are marked 
+with "use client", 
+so they're Server 
+Components by 
+default.
+  [31m|[0m Learn 
+more: https://nextjs
+.org/docs/getting-st
+arted/react-essentia
+ls
+  [31m|[0m 
+  [31m|[0m 
+   
+,-[[36;1;4mD:\Riot 
+Games\skillswap-mode
+rn\src\app\register\
+page.tsx[0m:1:1]
+ [2m1[0m | import 
+{ useState } from 
+"react";
+   : [31;1m        
+ ^^^^^^^^[0m
+ [2m2[0m | import 
+{ useRouter } from 
+"next/navigation";
+ [2m3[0m | import 
+Link from 
+"next/link";
+ [2m3[0m | import 
+{ toast } from 
+"sonner";
+   `----
+
+  [31mx[0m You're 
+importing a 
+component that 
+needs useRouter. It 
+only works in a 
+Client Component 
+but none of its 
+parents are marked 
+with "use client", 
+so they're Server 
+Components by 
+default.
+  [31m|[0m Learn 
+more: https://nextjs
+.org/docs/getting-st
+arted/react-essentia
+ls
+  [31m|[0m 
+  [31m|[0m 
+   
+,-[[36;1;4mD:\Riot 
+Games\skillswap-mode
+rn\src\app\register\
+page.tsx[0m:1:1]
+ [2m1[0m | import 
+{ useState } from 
+"react";
+ [2m2[0m | import 
+{ useRouter } from 
+"next/navigation";
+   : [31;1m        
+ ^^^^^^^^^[0m
+ [2m3[0m | import 
+Link from 
+"next/link";
+ [2m4[0m | import 
+{ toast } from 
+"sonner";
+ [2m4[0m | 
+   `----
+
+Import trace for 
+requested module:
+./src/app/register/p
+age.tsx
+
+
+> Build failed 
+because of webpack 
+errors

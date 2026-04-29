@@ -1,0 +1,145 @@
+﻿
+> skillswap-modern@0.1.0 build
+> next build
+
+  Γû▓ Next.js 14.2.35
+  - Environments: .env
+
+   Creating an optimized production build ...
+node.exe :  ΓÜá 
+Found lockfile 
+missing swc 
+dependencies, 
+patching...
+At D:\sambhav\htmal 
+and css\New 
+folder\npm.ps1:29 
+char:3
++   & $NODE_EXE 
+$NPM_CLI_JS $args
++   ~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~
+    + CategoryInfo  
+            : NotS  
+  pecified: ( ΓÜá   
+  Found lock...e    
+s, patching...:    
+String) [], Rem    
+oteException
+    + FullyQualifie 
+   dErrorId : Nati  
+  veCommandError
+ 
+ ΓÜá Found lockfile 
+missing swc 
+dependencies, 
+patching...
+ ΓÜá Found lockfile 
+missing swc 
+dependencies, 
+patching...
+ Γ£ô Compiled successfully
+   Linting and checking validity of types ...
+
+Failed to compile.
+
+./src/app/api/reques
+ts/route.ts
+5:27  Error: 'req' 
+is defined but 
+never used.  @typesc
+ript-eslint/no-unuse
+d-vars
+28:14  Error: 
+'error' is defined 
+but never used.  @ty
+pescript-eslint/no-u
+nused-vars
+
+./src/app/api/reques
+ts/[id]/route.ts
+73:21  Error: 
+Unexpected any. 
+Specify a different 
+type.  @typescript-e
+slint/no-explicit-an
+y
+
+./src/app/api/skills
+/route.ts
+28:14  Error: 
+'error' is defined 
+but never used.  @ty
+pescript-eslint/no-u
+nused-vars
+56:14  Error: 
+'error' is defined 
+but never used.  @ty
+pescript-eslint/no-u
+nused-vars
+
+./src/app/dashboard/
+page.tsx
+137:46  Error: 
+Unexpected any. 
+Specify a different 
+type.  @typescript-e
+slint/no-explicit-an
+y
+
+./src/app/login/page
+.tsx
+12:12  Error: 
+'loading' is 
+assigned a value 
+but never used.  @ty
+pescript-eslint/no-u
+nused-vars
+
+./src/app/profile/pa
+ge.tsx
+102:84  Error: 
+Unexpected any. 
+Specify a different 
+type.  @typescript-e
+slint/no-explicit-an
+y
+
+./src/app/register/p
+age.tsx
+16:12  Error: 
+'loading' is 
+assigned a value 
+but never used.  @ty
+pescript-eslint/no-u
+nused-vars
+
+./src/components/Mar
+ketplaceClient.tsx
+6:18  Error: 
+'Filter' is defined 
+but never used.  @ty
+pescript-eslint/no-u
+nused-vars
+15:21  Error: 
+'setLoading' is 
+assigned a value 
+but never used.  @ty
+pescript-eslint/no-u
+nused-vars
+
+./src/components/Nav
+bar.tsx
+10:5  Error: 'User' 
+is defined but 
+never used.  @typesc
+ript-eslint/no-unuse
+d-vars
+
+info  - Need to 
+disable some ESLint 
+rules? Learn more 
+here: https://nextjs
+.org/docs/basic-feat
+ures/eslint#disablin
+g-rules

@@ -1,0 +1,66 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id             Int      @id @default(autoincrement())
+  name           String
+  email          String   @unique
+  passwordHash   String
+  department     String?
+  year           Int?
+  bio            String?
+  timeCredits    Int      @default(5)
+  rating         Float    @default(0.0)
+  totalSessions  Int      @default(0)
+  createdAt      DateTime @default(now())
+
+  skills         Skill[]
+  requestsSent   SwapRequest[] @relation("Requester")
+  requestsRecv   SwapRequest[] @relation("Receiver")
+  transactionsFrom CreditTransaction[] @relation("FromUser")
+  transactionsTo   CreditTransaction[] @relation("ToUser")
+}
+
+model Skill {
+  id        Int       @id @default(autoincrement())
+  userId    Int
+  user      User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  name      String
+  type      String    // HAVE or NEED
+  category  String    // Programming, Mathematics, etc.
+}
+
+model SwapRequest {
+  id           Int      @id @default(autoincrement())
+  requesterId  Int
+  receiverId   Int
+  requester    User     @relation("Requester", fields: [requesterId], references: [id], onDelete: Cascade)
+  receiver     User     @relation("Receiver", fields: [receiverId], references: [id], onDelete: Cascade)
+  message      String?
+  status       String   @default("PENDING") // PENDING, ACCEPTED, REJECTED, COMPLETED
+  sessionTime  DateTime?
+  creditsAmt   Int      @default(1)
+  createdAt    DateTime @default(now())
+
+  transactions CreditTransaction[]
+}
+
+model CreditTransaction {
+  id          Int      @id @default(autoincrement())
+  fromUserId  Int
+  toUserId    Int
+  amount      Int
+  type        String   // EARN or SPEND
+  requestId   Int?
+  createdAt   DateTime @default(now())
+
+  fromUser    User     @relation("FromUser", fields: [fromUserId], references: [id])
+  toUser      User     @relation("ToUser", fields: [toUserId], references: [id])
+  request     SwapRequest? @relation(fields: [requestId], references: [id])
+}

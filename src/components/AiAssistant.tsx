@@ -54,11 +54,17 @@ export const AiAssistant = () => {
     return (
         <>
             <button
-                onClick={() => setIsOpen(true)}
+                onClick={() => setIsOpen(!isOpen)}
                 className="fixed bottom-6 right-6 w-14 h-14 bg-purple-600 rounded-full shadow-lg shadow-purple-500/30 flex items-center justify-center hover:bg-purple-500 transition-colors z-50 group"
             >
-                <MessageSquare className="w-6 h-6 text-white group-hover:scale-110 transition-transform" />
-                <span className="absolute -top-1 -right-1 w-4 h-4 bg-red-500 rounded-full border-2 border-[#0a0a0b] animate-pulse"></span>
+                {isOpen ? (
+                    <X className="w-6 h-6 text-white group-hover:scale-110 transition-transform" />
+                ) : (
+                    <MessageSquare className="w-6 h-6 text-white group-hover:scale-110 transition-transform" />
+                )}
+                {!isOpen && (
+                    <span className="absolute -top-1 -right-1 w-4 h-4 bg-red-500 rounded-full border-2 border-[#0a0a0b] animate-pulse"></span>
+                )}
             </button>
 
             <AnimatePresence>
@@ -67,7 +73,7 @@ export const AiAssistant = () => {
                         initial={{ opacity: 0, y: 20, scale: 0.95 }}
                         animate={{ opacity: 1, y: 0, scale: 1 }}
                         exit={{ opacity: 0, y: 20, scale: 0.95 }}
-                        className="fixed bottom-24 right-6 w-80 md:w-96 h-[500px] glass rounded-3xl z-50 flex flex-col shadow-2xl overflow-hidden border border-white/10"
+                        className="fixed bottom-24 right-6 w-80 md:w-96 max-h-[calc(100vh-120px)] h-[500px] glass rounded-3xl z-50 flex flex-col shadow-2xl overflow-hidden border border-white/10"
                     >
                         {/* Header */}
                         <div className="p-4 bg-purple-600 flex items-center justify-between">
